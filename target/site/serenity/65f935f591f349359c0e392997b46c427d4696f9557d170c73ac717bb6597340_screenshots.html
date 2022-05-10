@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Proyecto RETO SURA 2 SCREENPLAY</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="43e2a910f8cbfae10f4fbb9ac34c49016c7609a2b61e4de42c49913c7543de0b.html">Luisa Desea Comprar Un Producto En La Pagina De Falabella</a></span>
+                > <span class="truncate-60"><a
+                    href="65f935f591f349359c0e392997b46c427d4696f9557d170c73ac717bb6597340.html">Compra de un producto determinado </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 09-05-2022 17:32</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Luisa Desea Comprar Un Producto En La Pagina De Falabella </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Compra de un producto determinado
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given "&lt;Actor&gt;" desea poder comprar un televisor<br>When "&lt;Actor&gt;" busca un "&lt;Producto&gt;"<br>And Agrega a la bolsa de compras<br>Then El sistema debe permitir realizar el proceso de compra<br>And Ofrecerle a "&lt;Actor&gt;" diferentes opciones de pago</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="e0636279881445726eea1a0ad7cdb88cc45638986b9350b5e6b5592d3414a095.png" title=" 1: Compra de un producto determinado ({Actor=Luisa, Producto=Televisor})" width="1366"/>
+                <img src="e0636279881445726eea1a0ad7cdb88cc45638986b9350b5e6b5592d3414a095.png" title=" Given &quot;Luisa&quot; desea poder comprar un televisor" width="1366"/>
+                <img src="e0636279881445726eea1a0ad7cdb88cc45638986b9350b5e6b5592d3414a095.png" title=" Luisa open app" width="1366"/>
+                <img src="e0636279881445726eea1a0ad7cdb88cc45638986b9350b5e6b5592d3414a095.png" title=" Luisa opens the browser at https://www.falabella.com.co/falabella-co" width="1366"/>
+                <img src="e0636279881445726eea1a0ad7cdb88cc45638986b9350b5e6b5592d3414a095.png" title=" Luisa open app (completed)" width="1366"/>
+                <img src="89c828d2deb0d2a2057fe637860d898fcf47aeff8e011339bbfc993e7a1bd51e.png" title=" Luisa do login" width="1366"/>
+                <img src="89c828d2deb0d2a2057fe637860d898fcf47aeff8e011339bbfc993e7a1bd51e.png" title=" Luisa clicks on Boton para iniciar sesion" width="1366"/>
+                <img src="e08c7e20a9342b4bc9e37cead9c37ac4518f23f70c6cec66d04d7b8c48fc9d43.png" title=" Luisa clicks on Registrar nuevo usuario" width="1366"/>
+                <img src="6de0fa490993dc2ec29ac3218571580ffa542632ce135f27392c7c8139ffbaac.png" title=" Luisa enters 'Luisa' into Ingresar nombre de registro" width="1366"/>
+                <img src="387f0c58fee405715aee636146d80e6a05f75b6a2c7bb226fcd38fc22d49ba50.png" title=" Luisa enters 'Ziemann' into Apellido Paterno" width="1366"/>
+                <img src="17c36eff0a3c15561347be6e2db58639f1cb93506f3cdc7f1aafce8321b57a58.png" title=" Luisa enters 'Howe' into Apellido Paterno" width="1366"/>
+                <img src="d904d4813a11a3d681c297552650f141e2a390f49adc6f79d90c1b553db662b7.png" title=" Luisa enters 'scarlett.quitzon@hotmail.com' into email" width="1366"/>
+                <img src="0abd2adda6528d6cf298f9852474fbaeb88073e1d1442d3798fd3b569dc006b2.png" title=" Luisa enters 'k8zpy7j5u' into contrase&ntilde;a" width="1366"/>
+                <img src="350f65928198d93a060356c116a79d81639e7a8032bab63db1233c4a214e46dd.png" title=" Luisa enters 'k8zpy7j5u' into confirmar contrase&ntilde;a" width="1366"/>
+                <img src="3829dc873ec4ce262d0fb1310d2e77cb4c1993cca3b4231a0eb35af9d2df9463.png" title=" Luisa clicks on Selecciona pa&iacute;s" width="1366"/>
+                <img src="265354eeee96dbfe1d81f211a7c3e84d446cd072ebaa9a785ab08f00929180dd.png" title=" Luisa enters '36063503' into CEDULA" width="1366"/>
+                <img src="b7f0cc7a37ffa92527eee9c1445390d713bbda1ccb20806a11a0753308fac0f8.png" title=" Luisa clicks on Seleccionar genero" width="1366"/>
+                <img src="d43e27521c3a3be497971e15ba09f93605d5558510685539f66d1fb16b94c4c4.png" title=" Luisa clicks on Seleecionar d&iacute;a de nacimiento" width="1366"/>
+                <img src="8e737115e3939724b09d6c2318a38523c4dfa7a2a996bf42b7e684654a260d7c.png" title=" Luisa clicks on Seleccionar mes de nacimiento" width="1366"/>
+                <img src="9e92aeb9d283ecc8cc8c9c21a3f6a5c8903d3769b5e2225aaf2a1c7d47e935a0.png" title=" Luisa clicks on Selecciona A&ntilde;o de nacimiento" width="1366"/>
+                <img src="b6b1d62ba2a297d90acfe5127f53c920815800e81b35e4011f7fefc45ffafd02.png" title=" Luisa enters '03596228677' into Ingrese Celular" width="1366"/>
+                <img src="2debe62adcfb40c1b313f0520f07d3cf40a8203759cd24f175c134cda3563e4a.png" title=" Luisa clicks on Terminos y Condiciones" width="1366"/>
+                <img src="8627800d335fa6b4954e346035341fccd5d9596b98ad6e1edaae63bedcefca46.png" title=" Luisa clicks on Boton guardar" width="1366"/>
+                <img src="a3d837d82471a95fb5273e74f6d28c476b113b31d5f7c0ce1196ed7e73ac1181.png" title=" Luisa clicks on Boton para ir a la tienda" width="1366"/>
+                <img src="a3d837d82471a95fb5273e74f6d28c476b113b31d5f7c0ce1196ed7e73ac1181.png" title=" Luisa do login (completed)" width="1366"/>
+                <img src="a3d837d82471a95fb5273e74f6d28c476b113b31d5f7c0ce1196ed7e73ac1181.png" title=" Given &quot;Luisa&quot; desea poder comprar un televisor (completed)" width="1366"/>
+                <img src="a3d837d82471a95fb5273e74f6d28c476b113b31d5f7c0ce1196ed7e73ac1181.png" title=" When &quot;Luisa&quot; busca un &quot;Televisor&quot;" width="1366"/>
+                <img src="a3d837d82471a95fb5273e74f6d28c476b113b31d5f7c0ce1196ed7e73ac1181.png" title=" Then Ingreso correctamente should be 'Bienvenid@,'" width="1366"/>
+                <img src="f6a092d62d2e7941f3239e27f547c5211f486005c8c49721fddff4d27f63140b.png" title=" Luisa find product" width="1366"/>
+                <img src="f6a092d62d2e7941f3239e27f547c5211f486005c8c49721fddff4d27f63140b.png" title=" Luisa enters 'Televisor' into Campo de busqueda" width="1366"/>
+                <img src="4cf669f2b5e2202a5b5ed98a5e6967a8fc2a291833292432794566a71c0a9b07.png" title=" Luisa clicks on Boton para buscar" width="1366"/>
+                <img src="199953655822e70424db2d907607bf2889ab85988d4e8f19e4f66d4a0213313c.png" title=" Luisa clicks on Elegir producto al azar" width="1366"/>
+                <img src="199953655822e70424db2d907607bf2889ab85988d4e8f19e4f66d4a0213313c.png" title=" Luisa find product (completed)" width="1366"/>
+                <img src="3a61c576b950cb53c3534df183fc4f8b8affddf262ce40f0ba79174966106184.png" title=" When &quot;Luisa&quot; busca un &quot;Televisor&quot; (completed)" width="1366"/>
+                <img src="a496eb7be9ef19976fca3bf684ced19e8674b78d508908118533cc94f72d3d71.png" title=" And Agrega a la bolsa de compras" width="1366"/>
+                <img src="a496eb7be9ef19976fca3bf684ced19e8674b78d508908118533cc94f72d3d71.png" title=" Luisa add to cart" width="1366"/>
+                <img src="a496eb7be9ef19976fca3bf684ced19e8674b78d508908118533cc94f72d3d71.png" title=" Luisa clicks on A&ntilde;adir a la bolsa el producto" width="1366"/>
+                <img src="462dda8866adbf6b764bab816e04d8fa2d05f35044f858380644eea157b81887.png" title=" Luisa clicks on Ir al menu de la bolsa de compras" width="1366"/>
+                <img src="462dda8866adbf6b764bab816e04d8fa2d05f35044f858380644eea157b81887.png" title=" Luisa add to cart (completed)" width="1366"/>
+                <img src="462dda8866adbf6b764bab816e04d8fa2d05f35044f858380644eea157b81887.png" title=" And Agrega a la bolsa de compras (completed)" width="1366"/>
+                <img src="a8741614c22fc4f2c3801365ef79338786b3e9d057d025d7b3ce035c1d5a91f3.png" title=" Then El sistema debe permitir realizar el proceso de compra" width="1366"/>
+                <img src="a8741614c22fc4f2c3801365ef79338786b3e9d057d025d7b3ce035c1d5a91f3.png" title=" Luisa go to shopping" width="1366"/>
+                <img src="a8741614c22fc4f2c3801365ef79338786b3e9d057d025d7b3ce035c1d5a91f3.png" title=" Luisa clicks on Ir a comprar boton" width="1366"/>
+                <img src="6c6020b4a33b23e0d373b0e1b71cd0bd8a5ff68383a966e210616f6168e2d3ad.png" title=" Luisa clicks on Seleccionar departamento " width="1366"/>
+                <img src="fe919dba2c8c2c2ae8a405b1aa1f0961e8e2fe28476b74205a9b1db64e196327.png" title=" Luisa clicks on Seleccionar ciudad" width="1366"/>
+                <img src="63fa54b75eb83406a061203aa0ac4bc302ac4e905624146ec2ce748adcb9eec3.png" title=" Luisa clicks on Seleccionar barrio " width="1366"/>
+                <img src="65db1e31f99874a3a85db4c4d5508e1a2436e45548611f1bd5fae7cfdc0a943e.png" title=" Luisa clicks on Boton continuar" width="1366"/>
+                <img src="0f54a41002a896201ba84a00574994b7ce196da2175c381b5360a46472473c5d.png" title=" Luisa enters '4500' into Direcci&oacute;n" width="1366"/>
+                <img src="90c519ca314c8488db85536cd94de6adc4c3217645ecda166d0b0e415a03e3c1.png" title=" Luisa enters 'Kilback Meadow' into N&uacute;mero de departamento" width="1366"/>
+                <img src="1eb85270f2e52c330746d27e473e1fa725e94fcbf881c2f424fcf0d48d2d8812.png" title=" Luisa clicks on Confirmar la direcci&oacute;n" width="1366"/>
+                <img src="a819a282f2586edbd1ce3d17d56b86d3b798431ae22f54d497b7380bc2fcef6d.png" title=" Luisa clicks on Pagar producto" width="1366"/>
+                <img src="a819a282f2586edbd1ce3d17d56b86d3b798431ae22f54d497b7380bc2fcef6d.png" title=" Luisa go to shopping (completed)" width="1366"/>
+                <img src="a819a282f2586edbd1ce3d17d56b86d3b798431ae22f54d497b7380bc2fcef6d.png" title=" Then El sistema debe permitir realizar el proceso de compra (completed)" width="1366"/>
+                <img src="8a3cd2604aa9ca76437f02256507915037051e5d030beb498db32aa36d7f2f4a.png" title=" And Ofrecerle a &quot;Luisa&quot; diferentes opciones de pago" width="1366"/>
+                <img src="8a3cd2604aa9ca76437f02256507915037051e5d030beb498db32aa36d7f2f4a.png" title=" Then Proceso de compra realizado exitosamente should be 'Elige tu medio de pago'" width="1366"/>
+                <img src="8a3cd2604aa9ca76437f02256507915037051e5d030beb498db32aa36d7f2f4a.png" title=" And Ofrecerle a &quot;Luisa&quot; diferentes opciones de pago (completed)" width="1366"/>
+                <img src="8a3cd2604aa9ca76437f02256507915037051e5d030beb498db32aa36d7f2f4a.png" title=" 1: Compra de un producto determinado ({Actor=Luisa, Producto=Televisor}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.4</span>
+</div>
+</body>
+</html>
